@@ -16,7 +16,7 @@ import utilities.validator;
 
 /**
  *
- * @author user
+ * @author Kishor 
  */
 public class editcountry extends javax.swing.JInternalFrame {
 
@@ -53,6 +53,7 @@ public class editcountry extends javax.swing.JInternalFrame {
 
         setClosable(true);
         setIconifiable(true);
+        setTitle("Add/ Edit Country");
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 0, 0));

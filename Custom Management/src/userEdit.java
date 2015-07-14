@@ -30,13 +30,15 @@ public class userEdit extends javax.swing.JInternalFrame {
     int is_active =0;
     userSession eUser;
     /**
-     * Creates new form jtable
      * @param user
      */
     public userEdit(userSession user) {
         initComponents();
         conn = connection.getConnection();
         edit_password.setEditable(false);
+//        deleteBtn.setVisible(false);
+        userId.setVisible(false);
+        Errormsg.setVisible(false);
         this.eUser = user;
         edit_user.setEditable(false);
         this.fillUserTable("SELECT id,first_name,username,role_id FROM users");
@@ -82,6 +84,7 @@ public class userEdit extends javax.swing.JInternalFrame {
 
         setClosable(true);
         setIconifiable(true);
+        setTitle("User Update");
 
         userTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -132,7 +135,7 @@ public class userEdit extends javax.swing.JInternalFrame {
 
         jLabel3.setText("Contact no.");
 
-        edit_role.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Staff", "Admin", "Super User" }));
+        edit_role.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Import Staff", "Export Staff", "Admin", "Super User" }));
 
         jLabel1.setText("First name");
 
@@ -203,41 +206,44 @@ public class userEdit extends javax.swing.JInternalFrame {
                         .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 348, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel8)
-                                    .addComponent(userId))
+                                .addComponent(userId)
                                 .addGap(12, 12, 12)
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel2Layout.createSequentialGroup()
                                         .addComponent(Submit)
                                         .addGap(27, 27, 27)
                                         .addComponent(clear_btn)
-                                        .addGap(67, 67, 67))
-                                    .addComponent(Errormsg, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(edit_role, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addComponent(Errormsg, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addGap(13, 13, 13)
-                                        .addComponent(jLabel2))
-                                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(jLabel4)
-                                        .addComponent(jLabel3)
-                                        .addComponent(jLabel5)
-                                        .addComponent(jLabel6)))
-                                .addGap(20, 20, 20)
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(edit_contact, javax.swing.GroupLayout.DEFAULT_SIZE, 54, Short.MAX_VALUE)
-                                    .addComponent(edit_lname, javax.swing.GroupLayout.DEFAULT_SIZE, 54, Short.MAX_VALUE)
-                                    .addComponent(edit_fname, javax.swing.GroupLayout.DEFAULT_SIZE, 54, Short.MAX_VALUE)
-                                    .addComponent(edit_password, javax.swing.GroupLayout.DEFAULT_SIZE, 54, Short.MAX_VALUE)
-                                    .addComponent(edit_office, 0, 213, Short.MAX_VALUE)
-                                    .addComponent(edit_user)
-                                    .addComponent(password_change, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGap(129, 129, 129)
+                                        .addComponent(edit_role, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                                .addGap(13, 13, 13)
+                                                .addComponent(jLabel2))
+                                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                .addComponent(jLabel4)
+                                                .addComponent(jLabel3)
+                                                .addComponent(jLabel5)
+                                                .addComponent(jLabel6)
+                                                .addComponent(jLabel8)))
+                                        .addGap(20, 20, 20)
+                                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(edit_contact, javax.swing.GroupLayout.DEFAULT_SIZE, 54, Short.MAX_VALUE)
+                                            .addComponent(edit_lname, javax.swing.GroupLayout.DEFAULT_SIZE, 54, Short.MAX_VALUE)
+                                            .addComponent(edit_fname, javax.swing.GroupLayout.DEFAULT_SIZE, 54, Short.MAX_VALUE)
+                                            .addComponent(edit_password, javax.swing.GroupLayout.DEFAULT_SIZE, 54, Short.MAX_VALUE)
+                                            .addComponent(edit_office, 0, 213, Short.MAX_VALUE)
+                                            .addComponent(edit_user)
+                                            .addComponent(password_change, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                         .addComponent(userchkmsg, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
@@ -299,6 +305,7 @@ public class userEdit extends javax.swing.JInternalFrame {
         );
 
         deleteBtn.setText("Delete Selected Record");
+        deleteBtn.setEnabled(false);
         deleteBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 deleteBtnActionPerformed(evt);
@@ -397,6 +404,9 @@ public class userEdit extends javax.swing.JInternalFrame {
             error += "Invalid Last Name \n";
             // ...
         }
+        if (!validate.validatePhone(phone)){
+            error += "Invalid Phone Number \n";
+        }
         if(!validate.validateUsername(username) ){
             error += "Invalid Username \n";
         }
@@ -404,7 +414,9 @@ public class userEdit extends javax.swing.JInternalFrame {
         if(!validate.validatePassword(pswd) ){
             error += "Invalid Password. Password must be atleast 6 characters long.\n";
         }
-        
+        if (userId.getText().equals("")){
+            error += "Select Any row from table \n";
+        }
         if(error.equals("")){
             try{
                 String updateSQL = "UPDATE users SET first_name = ?, last_name = ?, phone = ?, office = ?, username = ?,password=?, role_id = ?, modified_by=? WHERE id = ?";
@@ -442,9 +454,12 @@ public class userEdit extends javax.swing.JInternalFrame {
         edit_user.setText("");
         edit_contact.setText("");
         Errormsg.setText("");
+        deleteBtn.setEnabled(false);
+        userId.setText("");
     }
     private void userTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_userTableMouseClicked
         // TODO add your handling code here:
+        
         try{
             // enable update button and desable Register button 
             int row = userTable.getSelectedRow();
@@ -455,6 +470,8 @@ public class userEdit extends javax.swing.JInternalFrame {
             pst.setString(1,Table_click);
             rs = pst.executeQuery();
             if(rs.next()){
+                deleteBtn.setEnabled(true);
+                
                 String fname = rs.getString("first_name");
                 userId.setText(rs.getString("id"));
                 edit_fname.setText(fname);
@@ -465,7 +482,7 @@ public class userEdit extends javax.swing.JInternalFrame {
                 edit_user.setText(rs.getString("username"));
                 edit_password.setText(rs.getString("password"));
                 
-                edit_role.setSelectedItem(rs.getString("role_id"));
+                edit_role.setSelectedIndex(rs.getInt("role_id"));
                 
                 
             }

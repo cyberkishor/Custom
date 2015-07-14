@@ -118,12 +118,12 @@ public class editimport extends javax.swing.JInternalFrame {
         setIconifiable(true);
         setMaximizable(true);
         setResizable(true);
-        setTitle("Edit Import");
+        setTitle("Edit Export");
 
         jLabel2.setFont(new java.awt.Font("Microsoft YaHei", 1, 12)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 0, 102));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("Import Declaration form");
+        jLabel2.setText("Export Declaration form");
 
         jLabel1.setFont(new java.awt.Font("GaramondNo4CyrTCYMed", 1, 12)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);

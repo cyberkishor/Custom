@@ -53,7 +53,7 @@
           <Properties>
             <Property name="columns" type="int" value="20"/>
             <Property name="rows" type="int" value="5"/>
-            <Property name="text" type="java.lang.String" value="Developed by :&#xa;RAMESH SUKAMANI&#xa;&#xa;For :&#xa;TIA CUSTOMS &#xa;COUNTER SECTION&#xa;&#xa;About Software :&#xa;This is a passenger clearance software that&#xa;helps easy clearance at Counter section of &#xa;TIA CUSTOMS.&#xa;&#xa;Contact : &#xa;9841358420 email: rsukamani@customs.gov.np"/>
+            <Property name="text" type="java.lang.String" value="Developed by :&#xa;Kishor Kumar Mahato&#xa;&#xa;For :&#xa;TIA CUSTOMS &#xa;COUNTER SECTION&#xa;&#xa;About Software :&#xa;This is a passenger clearance software that&#xa;helps easy clearance at Counter section of &#xa;TIA CUSTOMS.&#xa;&#xa;Contact : &#xa;9802075711 email: cyberkishor@gmail.com"/>
           </Properties>
         </Component>
       </SubComponents>

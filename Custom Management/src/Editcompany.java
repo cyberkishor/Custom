@@ -16,7 +16,7 @@ import utilities.validator;
 
 /**
  *
- * @author user
+ * @author Kishor
  */
 public class Editcompany extends javax.swing.JInternalFrame {
 

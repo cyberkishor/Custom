@@ -55,6 +55,8 @@ public class editoffice extends javax.swing.JInternalFrame {
 
         setClosable(true);
         setIconifiable(true);
+        setTitle("Add / Edit Office");
+        setToolTipText("");
 
         jLabel3.setText("Office Code:");
 

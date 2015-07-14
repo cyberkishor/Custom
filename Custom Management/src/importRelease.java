@@ -90,7 +90,7 @@ public class importRelease extends javax.swing.JInternalFrame {
         setIconifiable(true);
         setMaximizable(true);
         setResizable(true);
-        setTitle("Relase Custom");
+        setTitle("Relase Import Custom");
 
         jLabel2.setFont(new java.awt.Font("Microsoft YaHei", 1, 12)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 0, 102));

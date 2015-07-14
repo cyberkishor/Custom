@@ -104,7 +104,7 @@ public class export extends javax.swing.JInternalFrame {
         setIconifiable(true);
         setMaximizable(true);
         setResizable(true);
-        setTitle("Import Data");
+        setTitle("Export Data");
 
         jLabel1.setFont(new java.awt.Font("GaramondNo4CyrTCYMed", 1, 12)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);

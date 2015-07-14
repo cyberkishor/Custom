@@ -1,6 +1,4 @@
 
-import java.util.Objects;
-import utilities.comboboxItem;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -11,7 +9,7 @@ import utilities.comboboxItem;
 
 /**
  *
- * @author publisy
+ * @author kishor
  */
 public class ComboboxItem {
     private String code;

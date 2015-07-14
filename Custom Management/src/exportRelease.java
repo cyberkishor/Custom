@@ -90,12 +90,12 @@ public class exportRelease extends javax.swing.JInternalFrame {
         setIconifiable(true);
         setMaximizable(true);
         setResizable(true);
-        setTitle("Relase Custom");
+        setTitle("Relase Export Custom");
 
         jLabel2.setFont(new java.awt.Font("Microsoft YaHei", 1, 12)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 0, 102));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("Import Release form");
+        jLabel2.setText("Export Release form");
 
         jLabel1.setFont(new java.awt.Font("GaramondNo4CyrTCYMed", 1, 12)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);

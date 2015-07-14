@@ -17,7 +17,7 @@ import smusemiv.connection.connection;
 
 /**
  *
- * @author publisy
+ * @author Kishor
  */
 public class Report_date_hscode extends javax.swing.JInternalFrame {
 
@@ -59,6 +59,8 @@ public class Report_date_hscode extends javax.swing.JInternalFrame {
         setClosable(true);
         setMaximizable(true);
         setResizable(true);
+        setTitle("Report");
+        setToolTipText("");
 
         print.setText("Print the Report");
         print.addActionListener(new java.awt.event.ActionListener() {
@@ -238,7 +240,7 @@ Go.addActionListener(new java.awt.event.ActionListener() {
         .addGroup(report_panelLayout.createSequentialGroup()
             .addContainerGap()
             .addGroup(report_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 883, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(report_panelLayout.createSequentialGroup()
                     .addGap(8, 8, 8)
                     .addComponent(jScrollPane2))

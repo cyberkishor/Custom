@@ -6,7 +6,7 @@
 
 /**
  *
- * @author user
+ * @author Kihsor
  */
 public class About extends javax.swing.JInternalFrame {
 
@@ -35,7 +35,7 @@ public class About extends javax.swing.JInternalFrame {
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
-        jTextArea1.setText("Developed by :\nRAMESH SUKAMANI\n\nFor :\nTIA CUSTOMS \nCOUNTER SECTION\n\nAbout Software :\nThis is a passenger clearance software that\nhelps easy clearance at Counter section of \nTIA CUSTOMS.\n\nContact : \n9841358420 email: rsukamani@customs.gov.np");
+        jTextArea1.setText("Developed by :\nKishor Kumar Mahato\n\nFor :\nTIA CUSTOMS \nCOUNTER SECTION\n\nAbout Software :\nThis is a passenger clearance software that\nhelps easy clearance at Counter section of \nTIA CUSTOMS.\n\nContact : \n9802075711 email: cyberkishor@gmail.com");
         jScrollPane1.setViewportView(jTextArea1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

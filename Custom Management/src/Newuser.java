@@ -72,6 +72,7 @@ public class Newuser extends javax.swing.JInternalFrame {
 
         setClosable(true);
         setIconifiable(true);
+        setTitle("New User Registration");
 
         user.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
@@ -87,7 +88,7 @@ public class Newuser extends javax.swing.JInternalFrame {
 
         jLabel3.setText("Contact no.");
 
-        role.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Staff", "Admin", "Super User" }));
+        role.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Import Staff", "Export Staff", "Admin", "Super User" }));
 
         jLabel1.setText("First name");
 
